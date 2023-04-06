@@ -1,0 +1,76 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;600&family=Poppins:wght@100;200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-padding-top: 2rem; /*pesquisar*/
+    font-family: "Poppins", sans-serif;
+}
+
+:root { /*variáveis do css, exemplo: --main-color puxa #008148*/
+    --main-color: #008148;
+    --second-color: #1e3932;
+}
+
+section {
+    padding: 50px 10%;
+
+}
+
+img {
+    width: 50%;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center; /*Alinha verticalmente*/
+    justify-content: space-between; /*Alinha horizontalmente e primeiro item é deslocado para o início do eixo principal, o último é deslocado para o final, os demais são distribuídos uniformemente entre eles*/
+    background: #f6f6f6; /*cor do menu*/
+    box-shadow: 0 4px 50px #8e8d8d;
+    padding: 15px 10%;
+    transition: 0.2s;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 40px;
+}
+
+.navbar {
+    display: flex;
+    transition: 0.5s ease-out;
+}
+
+.navbar a{
+    font-size: 1rem; /*tamanho da fonte do menu*/
+    padding: 11px 20px; /*espaçando os textos*/
+    color: var(--second-color); /*chamando a variável de cor*/
+    font-weight: 600;
+    text-transform: undercase;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+
